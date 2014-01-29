@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+               http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+        default-autowire="byName"
+       >
+
+  <!--
+    A DriverManagerDataSource, as described in section 5.2.3 
+   -->
+  <bean id="tramiteFacadeEJB" 
+      class="test.unitario.mock.MockTramiteFacadeEJB">
+  </bean>
+
+
+
+    <bean id="procedimientoFacadeEJB" 
+      class="test.dao.MockProcedimientoFacadeEJB">
+  </bean>
+
+    <bean id="documentoFacadeEJB" 
+      class="test.dao.MockDocumentoFacadeEJB">
+  </bean>
+    
+    <bean id="idiomaDelegate" 
+      class="test.unitario.mock.MockIdiomaDelegate">
+  </bean>
+  
+    <bean name="procedimientoDelegate" 
+      class="test.unitario.mock.MockProcedimientoDelegate">
+  </bean>
+  
+    <bean name="tramiteDelegate" 
+      class="test.unitario.mock.MockTramiteDelegate">
+  </bean>
+
+    <bean name="familiaDelegate" 
+      class="test.unitario.mock.MockFamiliaDelegate">
+  </bean>
+  
+  <bean name="iniciacionDelegate" 
+      class="test.unitario.mock.MockIniciacionDelegate">
+  </bean>
+  
+  <bean name="uaResponsableDelegate" 
+      class="test.mock.MockUnidadAdministrativaDelegate">
+  </bean>
+
+
+  <bean name="uaDelegate" 
+      class="test.unitario.mock.MockUnidadAdministrativaDelegate">
+  </bean>
+
+  <bean name="destinatarioDelegate" 
+      class="test.unitario.mock.MockDestinatarioDelegate">
+  </bean>
+
+  
+  
+</beans>
